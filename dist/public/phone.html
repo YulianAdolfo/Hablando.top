@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/phone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="id-peer-to-call" style="display: none;"> <button id="connect" style="display: none;">connect</button>
+    <div class="request-for-number" id="request-for-number">
+        <div class="content">
+            <div class="header"><h1>Registra tu teléfono</h1></div>
+            <input type="tel" id="phone-number" placeholder="Ingresa el telefono">
+            <button id="register-phone-number">Registrar</button>
+        </div>
+    </div>
+    <div class="dashboard-contacts" id="dashboard-contacts">
+        <div class="header" id="header-contacts">
+            <h1 id="state-connection">Conectando...</h1>
+            <button id="add-contact">Agregar contacto +</button>
+        </div>
+    </div>
+    <audio controls id="audioplayer-microphone" muted style="display: none;"></audio>
+    <audio controls id="audioplayer" autoplay muted style="display: none;"></audio>
+    <div class="call-in-progress" id="options-call">
+        <div class="options-call">
+            <div class="bar">
+                <h2 id="status-call">Hablando.top</h2>
+                <button  id="close-call"><i class="fas fa-times"></i></button>
+                <div class="video-and-hang-up">
+                    <video id="video-element" autoplay></video>
+                    <button id="hang-up-now"><i class="fas fa-phone-slash"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="create-contact" id="create-contact">
+        <div class="container">
+            <h1>Crear contacto</h1>
+            <input type="text" id="phone-number-contact" placeholder="Telefono">
+            <input type="text" id="name-contact" placeholder="Nombre">
+            <button id="save-contact">Guardar</button>
+        </div>
+    </div>
+    <div class="incoming-call" id="incoming-call">
+        <div class="square">
+            <h1>llamada entrante</h1>
+            <div class="buttons">
+                <button id="accept-call">Contestar</button>
+                <button id="reject-call">Rechazar</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+    <script src="./code/phone.js"></script>
+</body>
+</html>

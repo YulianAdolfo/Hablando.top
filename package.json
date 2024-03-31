@@ -1,0 +1,18 @@
+{
+  "name": "hablando.top",
+  "version": "1.0.0",
+  "description": "App to call to my father",
+  "main": "./app/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./app/server.js",
+    "build": "xcopy /E /Y app dist"
+  },
+  "author": "Yuls",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "twilio": "^5.0.1"
+  }
+}

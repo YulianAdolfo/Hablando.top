@@ -1,0 +1,255 @@
+*, body {
+  border: 0;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+/* Estilos para el div que cubre toda la pantalla */
+.request-for-number, .call-in-progress, .incoming-call, .create-contact {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    z-index: 999; /* Asegura que el div se muestre sobre otros elementos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .create-contact {
+    display: none;
+  }
+  .create-contact .container {
+    width: 95%;
+    background-color: white;
+  }
+  .create-contact h1 {
+    display: block;
+    background-color: rgb(25, 132, 255);
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    font-size: 25px;
+  }
+  .create-contact .container input[type="text"], .create-contact .container button  {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #d1d1d1;
+    font-size: 25px;
+    padding: 5px;
+    text-align: center;
+  }
+  .create-contact .container button {
+    background-color: rgba(255, 145, 0, 0.918);
+    color: white;
+    font-size: 20px;
+    padding: 2px;
+    height: 32px;
+  }
+  .dashboard-contacts {
+    background-color: white;
+    width: 99%;
+    height: 96vh;
+    display: block;
+    margin: 0 auto;
+  }
+  .dashboard-contacts .header {
+    background-color: red;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .dashboard-contacts .header h1 {
+    display: inline-block;
+    color: white;
+    margin-left: 10px;
+    font-size: 25px;
+  }
+  .dashboard-contacts .header button {
+    float: right;
+    background-color: #ff0000;
+    height: 30px;
+    margin-right: 10px;
+    color: white;
+    font: bold;
+    font-size: 18px;
+  }
+  .view-contacts {
+    background-color: red;
+  }
+  .contact {
+    background-color: rgba(255, 145, 0, 0.918);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .contact i {
+    font-size: 30px;
+    color: white;
+  }
+  .contact h3 {
+    display: inline-block;
+    margin-left: 2px;
+    margin-right: 2px;
+    color: white;
+  }
+
+  .contact button {
+    background-color: rgb(25, 132, 255);
+    float: right;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+  }
+  .incoming-call {
+    display: none;
+  }
+  .incoming-call .square {
+    width: 80%;
+    height: 200px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .incoming-call h1 {
+    display: block;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .incoming-call .buttons {
+    text-align: center;
+  }
+  .incoming-call .buttons button {
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    font-size: 25px;
+
+  }
+  .incoming-call .buttons button:nth-child(1) {
+    background-color: rgb(0, 119, 255);
+    color: white;
+    font: bold;
+  }
+  .incoming-call .buttons button:nth-child(2) {
+    background-color: red;  
+    font: bold;
+    color: white;
+  }
+  .call-in-progress {
+    display: none;
+  }
+  .options-call {
+    width: 98%;
+    height: 98%;
+    background-color: white;
+    border-radius: 10px;
+  }
+  .options-call .bar {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(0, 119, 255);
+  }
+  .options-call .bar h2 {
+    display: inline-block;
+    margin: 0;
+    font-size: 20px;
+    padding: 2px;
+    margin-left: 10px;
+    color: white;
+  }
+  .options-call .bar button {
+    float: right;
+    margin-top: 3px;
+    margin-right: 10px;
+  }
+  #close-call {
+    background-color: red;
+    color: white;
+    width: 30px;
+    height: 20px;
+  }
+  .video-and-hang-up {
+    width: 100%;
+    height: 95vh;
+  }
+  .video-and-hang-up video {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
+  .video-and-hang-up button {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    border-radius: 50px;
+    cursor: pointer;
+    transform: translateX(-50%);
+  }
+  .video-and-hang-up button i {
+    color: white;
+    font-size: 20px;
+  }
+  /* Estilos para el contenido dentro del div */
+  .content {
+    background-color: white;
+    border-color: #ddd;
+    width: 90%;
+    border-radius: 10px;
+    padding-bottom: 10px;
+  }
+  .content .header {
+    background-color: rgb(25, 132, 255);
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 5px;
+    color: white;
+  }
+  .content input[type="tel"], #register-phone-number  {
+    width: 90%;
+    display: block;
+    height: 32px;
+    font-size: 18px;
+    border: none;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    outline: 0;
+    text-align: center;
+  }
+  .content input[type="tel"] {
+    border: 1px solid #d1d1d1;
+    padding: 4px;
+  }
+  #register-phone-number {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    background-color: rgb(25, 132, 255);
+    color: white;
+    height: 40px;
+  }
+  #request-for-number {
+    background-color: black;
+    display: none;
+  }
