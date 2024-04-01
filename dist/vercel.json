@@ -1,0 +1,8 @@
+{
+  "routes": [
+    {
+      "src": "/ice/",
+      "dest": "https:localhost:8500/ice"
+    }
+  ]
+}
