@@ -2,7 +2,7 @@
   "routes": [
     {
       "src": "/ice/",
-      "dest": ":8500/ice"
+      "dest": "http://localhost:8500/ice"
     }
   ]
 }
