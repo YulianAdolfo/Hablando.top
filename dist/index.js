@@ -8,7 +8,8 @@ require('dotenv').config()
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken =  process.env.TWILIO_AUTH_TOKEN;
-
+console.log(accountSid)
+console.log(authToken)
 
 let allowedContacts = {}
 allowedContacts['3178562595'] = ''
@@ -30,7 +31,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json());
 // Route to handle requests to "/"
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, PATH_FILES, 'phone.html'));
+  res.sendFile(path.join(__dirname, PATH_FILES, 'index.html'));
 });
 // Getting ICED servers
 app.get('/ice', async (req, res) => {
